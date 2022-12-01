@@ -1,0 +1,360 @@
+
+@import url('https://fonts.cdnfonts.com/css/norse');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+* {
+    margin: 0 auto;
+}
+body {
+    
+    background-color: #f2f6f5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.frame-1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.flex-element {
+    width: 25rem;
+    height: 100vh;
+    background-color: #842636;
+    flex: 1;    
+}
+
+#flex-element-1 {
+    font-family:'Norse', Courier, monospace;
+    font-size: 35rem;
+    color: #f2f6f5;
+    letter-spacing: -5rem;
+    align-items: center;
+    justify-content: left;
+}
+
+#flex-element-2 {
+    font-family:'Norse', Courier, monospace;
+    font-size: 5rem;
+    color: #f2f6f5;
+    text-align: center;
+    align-items: center;
+    padding-top: 30vh;
+    flex-grow: 2;
+    line-height: 4rem;
+    z-index: 55;
+}
+
+.welcometo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+
+#flex-element-3 {
+    font-family:'Norse', Courier, monospace;
+    font-size: 35rem;
+    color: #f2f6f5;
+    letter-spacing: -5rem;
+    align-items: center;
+    justify-content: right;
+    transform: scaleX(-1);
+}
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+table, tr, th {
+    padding: 5px;
+    border: 1px solid black;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+.frame-2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+}
+
+.flex-element-white {
+    width: 25rem;
+    height: 100vh;
+    background-color: #f2f6f5;
+    flex: 1;    
+}
+
+#flex-element-white {
+    font-family:'Norse', Courier, monospace;
+    font-size: 5rem;
+    color: #842636;
+    text-align: center;
+    align-items: center;
+    line-height: 4rem;
+    z-index: 55;
+}
+
+.choose {
+    padding-top: 5vh;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.title-white {
+    display: block;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    bottom: 5%;
+    font-family:'Norse', Courier, monospace;
+    font-size: 2.5rem;
+    color: #842636;
+    text-align: center;
+    line-height: 4rem;
+}
+
+.title {
+    display: block;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    bottom: 5%;
+    font-family:'Norse', Courier, monospace;
+    font-size: 2.5rem;
+    color: #f2f6f5;
+    text-align: center;
+    line-height: 4rem;
+}
+
+.recipes {
+    margin: 0 auto;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.recipe {
+    color: #f2f6f5;
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    background-color: #842636;
+    width: 15rem;
+    height: 15rem;
+    margin: 3rem;
+    border-radius: 100%;
+    border: 5px solid #842636;
+    flex: 0 0 auto;
+    content-visibility: hidden;
+}
+
+
+.recipe:hover {
+    
+    box-shadow: 0 0 32px 110px rgba(88, 23, 34, 0.9) inset;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    content-visibility: visible;
+}
+
+.recipe-info-line {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 50%;
+    background-color: #f2f6f5;
+    height: 3px;
+}
+
+.recipe-info ul{
+    margin-left: 10%;
+    list-style-type: none;
+}
+.recipe-info ul li{
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+
+#recipe-1 {
+    background-size: contain;
+    background-position: center;
+    background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+}
+
+#recipe-2 {
+    background-size: contain;
+    background-position: center;
+    background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+}
+
+#recipe-3 {
+    background-size: contain;
+    background-position: center;
+    background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+}
+
+
+
+
+@media screen and (max-width: 910px) {
+    .frame-2 {
+        height: 130vh;
+    }
+    .recipes {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .recipe {
+        display: inline-block;
+        margin: 1rem;
+    }
+}
+
+
+
+.frame-3 {
+    font-family:'Norse', Courier, monospace;
+    color: #f2f6f5;
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    background-color: #842636;
+    width: 100%;
+    height: 300vh;
+}
+
+.recipe-header {
+    height: 10%;
+    display: flex;
+    width: 80vw;
+}
+
+
+.recipe-container {
+    background-color: #f2f6f5;
+    color:#842636;
+    margin: 0 auto;
+    width: 80vw;
+    height: 80%;
+    z-index: 99;
+}
+
+.recipe-container-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingredients {
+    padding-left: 5%;
+    letter-spacing: 0.3rem;
+    flex: 1 1 0;
+}
+
+.ingredients ul li {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: bolder;
+}
+
+
+.recipe-pic {
+    background-color: #842636;
+    height: 25rem;
+    width: 25rem;
+    border-radius: 100%;
+    flex: 0 1 auto;
+    position: relative;
+    bottom: 10vh;
+    border: 1rem solid;
+    background-size: contain;
+    background-position: center;
+    background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+    
+}
+
+.nutrition {
+    padding-left: 5%;
+    letter-spacing: 0.3rem;
+    flex: 1 1 0;
+}
+
+.nutrition ul li {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: bolder;
+}
+
+
+
+.recipe-info-header {
+    flex: 1 1 0;
+}
+
+.recipe-info-header-desc {
+    margin-top: 3%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    flex: 5 1 0;
+}
+
+.recipe-info-header ul{
+    list-style-type: none;
+    margin-left: -30px;
+}
+.recipe-info-header ul li{
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.recipe-instructions {
+    margin-top: 15%;
+    padding-left: 5%;
+    overflow: auto;
+}
+
+.recipe-steps{
+    margin-top: 2%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 910px) {
+    .frame-3 {
+        height: 450vh;
+    }
+    .recipe-header {
+        flex-direction: column;
+    }
+    .recipe-pic {
+        height: 15rem;
+        width: 15rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: -3vh;
+    }
+    .recipe-container-header{
+        flex-direction: column;
+    }
+}
