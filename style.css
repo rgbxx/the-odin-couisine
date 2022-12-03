@@ -1,13 +1,14 @@
 
 @import url('https://fonts.cdnfonts.com/css/norse');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 * {
     margin: 0 auto;
+    scroll-behavior: smooth
 }
 body {
     
-    background-color: #f2f6f5;
+    background-color: #842636;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
@@ -75,12 +76,12 @@ table, tr, th {
 }
 
 
+
 .frame-2 {
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
-    
 }
 
 .flex-element-white {
@@ -98,6 +99,7 @@ table, tr, th {
     align-items: center;
     line-height: 4rem;
     z-index: 55;
+    height: 100%;
 }
 
 .choose {
@@ -108,11 +110,12 @@ table, tr, th {
 }
 
 .title-white {
+    position: absolute;
     display: block;
     margin: 0 auto;
     right: 0;
     left: 0;
-    bottom: 5%;
+    bottom: 2%;
     font-family:'Norse', Courier, monospace;
     font-size: 2.5rem;
     color: #842636;
@@ -149,7 +152,7 @@ table, tr, th {
     background-color: #842636;
     width: 15rem;
     height: 15rem;
-    margin: 3rem;
+    margin-top: 3rem;
     border-radius: 100%;
     border: 5px solid #842636;
     flex: 0 0 auto;
@@ -184,12 +187,22 @@ table, tr, th {
     text-align: left;
 }
 
+.recipes figure {
+    vertical-align: top;
+    text-align: center;
+}
+.recipe-title {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-size: 2rem;
+}
 
 #recipe-1 {
-    background-size: contain;
-    background-position: center;
-    background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+    background-size: cover;
+    background-position: bottom;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mhajeb1.jpg/250px-Mhajeb1.jpg');
 }
+
 
 #recipe-2 {
     background-size: contain;
@@ -206,18 +219,87 @@ table, tr, th {
 
 
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 912px) {
+    .frame-1 {
+        flex-direction: column;
+        transition: 0.5s;
+    }
+
+    .flex-element {
+        width: 25rem;
+        height: 100vh;
+        background-color: #842636;
+        flex: 1;  
+        transition: 0.5s;  
+    }
+
+    #flex-element-1 {
+        width: 100vw;
+        font-family:'Norse', Courier, monospace;
+        font-size: 20rem;
+        color: #f2f6f5;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        flex-grow: 3;
+        flex-flow:column;
+        display: flex;
+        transition: 0.5s;
+    }
+    
+
+    #flex-element-2 {
+        font-family:'Norse', Courier, monospace;
+        font-size: 5rem;
+        color: #f2f6f5;
+        text-align: center;
+        align-items: center;
+        padding-top: 0;
+        flex-grow: 2;
+        line-height: 4rem;
+        z-index: 55;
+        display: contents;
+        margin: 0 auto;
+        transition: 0.5s;
+    }
+    
+    
+    
+    #flex-element-3 {
+        width: 100vw;
+        font-family:'Norse', Courier, monospace;
+        font-size: 20rem;
+        color: #f2f6f5;
+        flex-flow:column;
+        transform: scaleY(-1);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        flex-grow: 3;
+        display: flex;
+        transition: 0.5s;
+    }
+
+
+
     .frame-2 {
-        height: 130vh;
+        height: 160vmax;
+        transition: 0.5s;
     }
     .recipes {
         height: auto;
         flex-direction: column;
         align-items: center;
+        transition: 0.5s;
     }
     .recipe {
         display: inline-block;
         margin: 1rem;
+        transition: 0.5s;
     }
 }
 
@@ -230,7 +312,7 @@ table, tr, th {
     font-size: 2.5rem;
     background-color: #842636;
     width: 100%;
-    height: 300vh;
+    height: 200vh;
 }
 
 .recipe-header {
@@ -247,12 +329,12 @@ table, tr, th {
     width: 80vw;
     height: 85%;
     z-index: 99;
+    overflow: auto;
 }
 
 .recipe-container-header{
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .ingredients {
@@ -261,34 +343,71 @@ table, tr, th {
     flex: 1 1 0;
 }
 
-.ingredients ul li {
+.ingredients ol li::marker{
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.ingredients ol li {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0;
     font-size: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
     font-weight: bolder;
+}
+
+.ingredients figcaption{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.3rem;
+    letter-spacing: 0;
+    text-decoration: underline;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 
 .recipe-pic {
     background-color: #842636;
     height: 25rem;
-    width: 25rem;
+    min-width: 25rem;
     border-radius: 100%;
     flex: 0 1 auto;
     position: relative;
     bottom: 10vh;
     border: 1rem solid;
-    background-size: contain;
-    background-position: center;
-    background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
-    
+    background-size: cover;
+    background-position: bottom;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mhajeb1.jpg/250px-Mhajeb1.jpg');
+    margin-top: -1rem;
 }
 
 .nutrition {
-    padding-left: 5%;
     letter-spacing: 0.3rem;
-    flex: 1 1 0;
+    flex: 1.2 1 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: right;
+}
+
+.nutrition i {
+    font-size:smaller;
+}
+
+.nutrition figcaption{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.3rem;
+    letter-spacing: 0;
+    text-decoration: underline;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nutrition ul li::marker {
+    font-size: 0.7rem;
 }
 
 .nutrition ul li {
@@ -311,6 +430,7 @@ table, tr, th {
     font-size: 1.3rem;
     line-height: 1.3rem;
     flex: 5 1 0;
+    border-left:2px solid #f2f6f5;
 }
 
 .recipe-info-header ul{
@@ -337,24 +457,46 @@ table, tr, th {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: bolder;
+    margin-bottom: 5%;
 }
 
-@media screen and (max-width: 910px) {
+.recipe-steps span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 1024px) {
     .frame-3 {
-        height: 450vh;
+        height: 400vh;
+        transition: 0.5s;
     }
     .recipe-header {
         flex-direction: column;
+        transition: 0.5s;
     }
+
+    .recipe-info-header-desc {
+        border-left: 0;
+        border-top:2px solid #f2f6f5;
+        transition: 0.5s;
+    }
+
     .recipe-pic {
         height: 15rem;
-        width: 15rem;
+        min-width: 15rem;
         left: 0;
         right: 0;
         margin: 0 auto;
         bottom: -3vh;
+        transition: 0.5s;
     }
     .recipe-container-header{
         flex-direction: column;
+        transition: 0.5s;
+    }
+    .recipe-container{
+        margin-top: 15%;
+        transition: 0.5s;
     }
 }
